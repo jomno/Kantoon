@@ -1,0 +1,80 @@
+<div class="container">
+ <div class="columns is-multiline is-mobile">
+  
+  <div class="column is-4 mt-4">
+    <div class="tile notification is-primary ">
+        <p class="has-text-centered">Naver</p>
+    </div>
+    <%@comics.each do |comic|%>
+    <div class="columns">
+        <div class="column is-narrow has-text-centered">
+             <div style="width: 50px;">
+               <p class="title is-5">No. 1</p>
+            </div>
+        </div>
+        <div class="column">
+            <%if comic.image.attached?%>
+             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image is-fullwidth"%></div>
+
+            <% end %>
+            <div class="title">Title: <%=comic.title%></div>
+            <div class="subtitle">Genre: <%=comic.genre%> / Author: <%=comic.author%></div>
+            
+        </div>
+        <hr>
+    </div>
+    <%end%>
+  </div>
+  
+ <div class="column is-4 mt-4">
+    <div class="tile notification is-danger ">
+        <p class="has-text-centered">Naver</p>
+    </div>
+    <%@daums.each do |daum|%>
+    <div class="columns">
+        <div class="column is-narrow has-text-centered">
+             <div style="width: 50px;">
+               <p class="title is-5">1</p>
+            </div>
+        </div>
+        <div class="column">
+            <%if daum.image.attached?%>
+            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image is-fullwidth"%></div>
+
+            <% end %>
+            <div><%=daum.title%></div>
+            <div><%=daum.genre%><%=daum.author%></div>
+            
+        </div>
+        <hr>
+    </div>
+    <%end%>
+  </div>
+ <div class="column is-4 mt-4">
+    <div class="tile notification is-warning ">
+        <p class="has-text-centered">Kakao Page</p>
+    </div>
+    <%@kakaos.each do |kakao|%>
+    <div class="columns">
+        <div class="column is-narrow has-text-centered">
+             <div style="width: 50px;">
+               <p class="title is-5">1</p>
+            </div>
+        </div>
+        <div class="column">
+            <%if kakao.image.attached?%>
+            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image is-fullwidth"%></div>
+
+            <% end %>
+            <div><%=kakao.title%></div>
+            <div><%=kakao.genre%><%=kakao.author%></div>
+            
+        </div>
+        <hr>
+    </div>
+    <%end%>
+  </div>
+
+
+</div>
+</div>

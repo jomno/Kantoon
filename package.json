@@ -1,0 +1,7 @@
+{
+  "name": "kantoon",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.9.1"
+  }
+}

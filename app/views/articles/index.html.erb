@@ -1,0 +1,35 @@
+<div class="container mt-6">
+  <div class="columns is-multiline is-mobile">
+  <%@articles.each do |article|%>
+        <div class="column mt-4 is-half">
+        <div class="box">
+  <article class="media">
+    <div class="media-left">
+        <%if article.image.attached?%>
+        <figure class="image is-128x128">       
+            <div><%=link_to (image_tag article.image),article_path(article)%></div>  
+        </figure>
+        <% end %>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%=article.title%></strong>
+          <br>
+          <%=truncate(article.desc, length: 96, separator: ' ')%>
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <p class="level-item" aria-label="reply">
+            <%=article.created_at%> | <%=article.reporter%>
+          </p>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+        </div>
+    <% end %>
+  </div>
+</div>

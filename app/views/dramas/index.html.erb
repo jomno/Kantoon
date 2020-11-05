@@ -27,7 +27,7 @@
       <% @dramas.each do |drama| %>
       <tr>
         <td><%= drama.title %></td>
-        <td><%= drama.image %></td>
+        <td><%= image_tag drama.image %></td>
         <td><%= drama.desc %></td>
         <td><%= drama.character %></td>
         <td><%= drama.category.name %></td>

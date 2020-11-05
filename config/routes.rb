@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :categories
+  resources :dramas, only: [:index]
   resources :articles, only: [:index, :show]
   devise_for :users
   get 'kakaos/show'

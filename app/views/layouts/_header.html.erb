@@ -1,4 +1,4 @@
-<section class="hero is-info" style="background-image: url('bg2.jpg')">
+<section class="hero is-info" style="background-image: url('back3.jpg')">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <nav class="navbar">
@@ -11,23 +11,46 @@
           </span>
         </div>
         <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active">
-              Home
+          <div class="navbar-end ">
+            <a href="/" class="navbar-item">
+             <span class="icon is-large">
+              <i class="fas fa-2x fas fa-home "></i>
+             </span>
             </a>
-            <a class="navbar-item">
-              Examples
+            <a href="/articles" class="navbar-item">
+             <span class="icon is-large">
+              <i class="fas fa-2x far fa-newspaper"></i>
+             </span>
             </a>
-            <a class="navbar-item">
-              Documentation
+            <a href="#" class="navbar-item">
+             <span class="icon is-large">
+              <i class="fas fa-2x fas fa-search"></i>
+             </span>
             </a>
             <span class="navbar-item">
-              <a class="button is-primary is-inverted">
+
+              <%if user_signed_in?%>
+              <a href="/users/sign_out" data-method="delete" class="button is-link is-inverted">
                 <span class="icon">
-                  <i class="fab fa-github"></i>
+                  <i class="fas fa-sign-out-alt"></i>
                 </span>
-                <span>Download</span>
+                <span>Log out</span>
               </a>
+              <%else%>
+              <a href="/users/sign_in" class="button is-link is-inverted">
+                <span class="icon">
+                  <i class="fas fa-sign-in-alt"></i>
+                </span>
+                <span>Log in</span>
+              </a>
+
+              <a href="/users/sign_up" class="button is-link is-inverted">
+                <span class="icon">
+                  <i class="far fa-user-circle"></i>
+                </span>
+                <span>Sign up</span>
+              </a>
+              <%end%>
             </span>
           </div>
         </div>

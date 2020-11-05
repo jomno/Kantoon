@@ -1,0 +1,41 @@
+
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <aside class="menu mt-6">
+          <p class="menu-label is-size-4 title">
+            Drama
+          </p>
+          
+          <ul class="menu-list">
+          <%Category.all.each do |cat|%>
+            <li><%=link_to cat.name, dramas_path(category: cat.name)%></li>
+            <hr>
+            <% end %>
+          </ul>
+          
+          <p class="menu-label is-size-4 title">
+            Movie
+          </p>
+          <ul class="menu-list">
+
+          </ul>
+          
+        </aside>
+      </div>  
+      <div class="column">
+      <% @dramas.each do |drama| %>
+      <tr>
+        <td><%= drama.title %></td>
+        <td><%= drama.image %></td>
+        <td><%= drama.desc %></td>
+        <td><%= drama.character %></td>
+        <td><%= drama.category.name %></td>
+      </tr>
+      <% end %>
+      
+      
+      
+      </div>
+    </div>  
+  </div>    

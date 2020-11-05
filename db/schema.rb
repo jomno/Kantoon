@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_03_121215) do
+ActiveRecord::Schema.define(version: 2020_11_05_011552) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -68,6 +68,13 @@ ActiveRecord::Schema.define(version: 2020_11_03_121215) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comics", force: :cascade do |t|
     t.string "image"
     t.string "title"
@@ -84,6 +91,17 @@ ActiveRecord::Schema.define(version: 2020_11_03_121215) do
     t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dramas", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.string "desc"
+    t.string "character"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_dramas_on_category_id"
   end
 
   create_table "kakaos", force: :cascade do |t|

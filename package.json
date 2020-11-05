@@ -2,6 +2,7 @@
   "name": "kantoon",
   "private": true,
   "dependencies": {
-    "bulma": "^0.9.1"
+    "bulma": "^0.9.1",
+    "bulma-dashboard": "^0.3.1"
   }
 }

@@ -1,80 +1,80 @@
 <div class="container">
  <div class="columns is-multiline is-mobile">
   
-  <div class="column is-4 mt-4">
+  <div class="column box is-4 mt-4 has-text-centered">
     <div class="tile notification is-primary ">
-        <p class="has-text-centered">Naver</p>
+        <p class="has-text-weight-bold is-size-4 ">Naver</p>
     </div>
+    <%@count = 0%>
     <%@comics.each do |comic|%>
     <div class="columns">
         <div class="column is-narrow has-text-centered">
-             <div style="width: 50px;">
-               <p class="title is-5">No. 1</p>
+             <div style="width: 40px;">
+               <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
             </div>
         </div>
         <div class="column">
             <%if comic.image.attached?%>
-             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image is-fullwidth"%></div>
+             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image mr-3", style:"width: 350px;"%></div>
 
             <% end %>
-            <div class="title">Title: <%=comic.title%></div>
-            <div class="subtitle">Genre: <%=comic.genre%> / Author: <%=comic.author%></div>
+            <div class="title"><%=comic.title%></div>
+            <div class="subtitle has-text-grey"><%=comic.genre%> | <%=comic.author%></div>
             
         </div>
-        <hr>
+
     </div>
     <%end%>
   </div>
   
- <div class="column is-4 mt-4">
+ <div class="column box has-text-centered is-4 mt-4">
     <div class="tile notification is-danger ">
-        <p class="has-text-centered">Naver</p>
+        <p class="has-text-weight-bold is-size-4 ">Daum</p>
     </div>
+    <%@count = 0%>
     <%@daums.each do |daum|%>
     <div class="columns">
         <div class="column is-narrow has-text-centered">
              <div style="width: 50px;">
-               <p class="title is-5">1</p>
+               <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
             </div>
         </div>
         <div class="column">
             <%if daum.image.attached?%>
-            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image is-fullwidth"%></div>
+            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image mr-3", style:"width: 350px;"%></div>
 
             <% end %>
-            <div><%=daum.title%></div>
-            <div><%=daum.genre%><%=daum.author%></div>
-            
+            <div class="title"><%=daum.title%></div>
+            <div class="subtitle has-text-grey"><%=daum.genre%> | <%=daum.author%></div>            
         </div>
-        <hr>
+
     </div>
     <%end%>
   </div>
- <div class="column is-4 mt-4">
+
+ <div class="column box is-4 mt-4">
     <div class="tile notification is-warning ">
-        <p class="has-text-centered">Kakao Page</p>
+        <div class="has-text-weight-bold is-size-4 ">Kakao Page</div>
     </div>
+    <%@count = 0%>
     <%@kakaos.each do |kakao|%>
-    <div class="columns">
+    <div class="columns has-text-centered">
         <div class="column is-narrow has-text-centered">
              <div style="width: 50px;">
-               <p class="title is-5">1</p>
+               <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
             </div>
         </div>
         <div class="column">
             <%if kakao.image.attached?%>
-            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image is-fullwidth"%></div>
+            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image mr-3", style:"width: 350px;"%></div>
 
             <% end %>
-            <div><%=kakao.title%></div>
-            <div><%=kakao.genre%><%=kakao.author%></div>
-            
+            <div class="title"><%=kakao.title%></div>
+            <div class="subtitle has-text-grey"><%=kakao.genre%> | <%=kakao.author%></div>            
         </div>
-        <hr>
     </div>
     <%end%>
   </div>
-
 
 </div>
 </div>

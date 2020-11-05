@@ -10,26 +10,23 @@
   <div class= "column is-6">
     <div class="card">
         <header class="card-header">
-            <p class="card-header-title has-background-link-light is-size-3 ">
+            <p class="card-header-title has-background-white-ter is-size-3 ">
             <%=@kakao.title%>
             </p>
         </header>
                 <header class="card-header">
-            <p class="card-header-title is-size-4">
-            Price
+            <p class="card-header-subtitle is-size-5 is-italic">
+            Author: <%=@kakao.author%> / Genre: <%=@kakao.genre%>
             </p>
         </header>
   <div class="card-content">
-    <h5>Description</h5>
-    <p class="subtitle">
-      description<br>
-      <%=@kakao.author%>
-    </p>
+    <h5><%=@kakao.desc%></h5>
+
   </div>
   <footer class="card-footer">
-    <p class="card-footer-item ">
-        Read the first episode
-    </p>
+    <a href="#" class="card-footer-item "><i class="fas fa-external-link-square-alt mr-2"></i>
+        Try the first episode
+    </a>
   </footer>
 </div>
     </div>

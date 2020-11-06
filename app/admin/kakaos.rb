@@ -15,6 +15,7 @@ ActiveAdmin.register Kakao do
       column :title
       column :genre
       column :author
+      column :desc
     end
     
     
@@ -24,6 +25,7 @@ ActiveAdmin.register Kakao do
     f.input :title
     f.input :genre
     f.input :author
+    f.input :desc
     
     end
     f.actions
@@ -42,6 +44,7 @@ ActiveAdmin.register Kakao do
         row :title
         row :genre
         row :author
+        row :desc
       end
     end
 end

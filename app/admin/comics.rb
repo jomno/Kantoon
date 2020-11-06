@@ -16,6 +16,7 @@ column :image do |comic|
   column :title
   column :genre
   column :author
+  column :desc
 end
 
 
@@ -25,6 +26,7 @@ f.input :image, as: :file
 f.input :title
 f.input :genre
 f.input :author
+f.input :desc
 
 end
 f.actions
@@ -43,6 +45,7 @@ show do
     row :title
     row :genre
     row :author
+    row :desc
   end
 end
 

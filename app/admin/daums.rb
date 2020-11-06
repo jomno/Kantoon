@@ -16,6 +16,7 @@ ActiveAdmin.register Daum do
       column :title
       column :genre
       column :author
+      column :desc
     end
     
     
@@ -25,6 +26,7 @@ ActiveAdmin.register Daum do
     f.input :title
     f.input :genre
     f.input :author
+    f.input :desc
     
     end
     f.actions
@@ -43,6 +45,7 @@ ActiveAdmin.register Daum do
         row :title
         row :genre
         row :author
+        row :desc
       end
     end
   

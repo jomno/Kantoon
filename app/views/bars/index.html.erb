@@ -1,0 +1,94 @@
+<div class="container mt-4">
+    <section class="hero is-info welcome is-small mt-4" style="background-image: url()">
+     <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Webtoon markets in Korea
+        </h1>
+        <h2 class="subtitle">
+            Check out our top 5 comics!
+        </h2>
+      </div>
+     </div>
+    </section>
+
+                    <section class="info-tiles mt-5">
+                    <div class="tile is-ancestor has-text-centered">
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">17개</p>
+                                <p class="subtitle">주요 플랫폼 수</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">36개</p>
+                                <p class="subtitle">전체 플랫폼 수</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">13,381</p>
+                                <p class="subtitle">총 웹툰작품 수</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">9,563</p>
+                                <p class="subtitle">총 웹툰작가 수</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+    <div class="columns mt-4 is-centered">
+     <div class="column is-5 mr-6">
+      <%=column_chart @bars.pluck(:year, :epi), xtitle: "년도", ytitle: "단위(편)", colors: ["#8838F4"]%>
+     </div>
+     <div class="column is-5 ml-6">
+      <%=pie_chart @pies.pluck(:kind, :percent), donut: true %>
+     </div>
+    </div>
+</div>
+      <section class = "section">
+         <div class = "container ">
+           <div class = "columns is-centered">
+            <div class = "column is-5">
+            <br>
+            
+            <table class = "table is-hoverable is-striped is-fullwidth ">
+               <thead>
+                  <tr>
+                     <th>#</th>
+                     <th>Platform</th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th>PPI</th>
+                  </tr>
+               </thead>
+               <tbody>
+                 <%@count=0%>
+                 <%@Platforms.each do |plat|%>
+                  <tr>
+                     <td><%=@count+=1%></td>
+                     <td>
+                        <%if plat.image.attached?%>
+                            <%=image_tag plat.image, class:"image is-32x32"%>
+                        <% end %>
+                        <%=plat.name%>
+                     </td>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <td><%=plat.ppi%></td>
+                  </tr>
+                 <%end%>
+               </tbody>
+            </table>
+           </div> 
+          </div>  
+         </div>
+      </section>

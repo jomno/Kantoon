@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bars, only: [:index]
   resources :categories
   resources :dramas, only: [:index]
   resources :articles, only: [:index, :show]

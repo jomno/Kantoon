@@ -26,12 +26,12 @@
                <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
             </div>
         </div>
-        <div class="column">
+        <div class="column ">
             <%if comic.image.attached?%>
-             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image mr-3", style:"width: 350px;"%></div>
+             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image ml-5", style:"width: 300px;"%></div>
 
             <% end %>
-            <div class="title"><%=comic.title%></div>
+            <div class="title mt-3"><%=comic.title%></div>
             <div class="subtitle has-text-grey"><%=comic.genre%> | <%=comic.author%></div>
             
         </div>
@@ -57,10 +57,10 @@
         </div>
         <div class="column">
             <%if daum.image.attached?%>
-            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image mr-3", style:"width: 350px;"%></div>
+            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image ml-5", style:"width: 300px;"%></div>
 
             <% end %>
-            <div class="title"><%=daum.title%></div>
+            <div class="title mt-3"><%=daum.title%></div>
             <div class="subtitle has-text-grey"><%=daum.genre%> | <%=daum.author%></div>            
         </div>
 
@@ -85,10 +85,10 @@
         </div>
         <div class="column">
             <%if kakao.image.attached?%>
-            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image mr-3", style:"width: 350px;"%></div>
+            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image ml-5", style:"width: 300px;"%></div>
 
             <% end %>
-            <div class="title"><%=kakao.title%></div>
+            <div class="title mt-3"><%=kakao.title%></div>
             <div class="subtitle has-text-grey"><%=kakao.genre%> | <%=kakao.author%></div>            
         </div>
     </div>

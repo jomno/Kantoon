@@ -2,7 +2,7 @@
   <div class="columns is-centered">
     <div class="column is-10">
         <p class="title is-2 mt-4"><%=@article.title%></p>
-        <p class="subtitle mt-2"><%=@article.created_at%> | <%=@article.reporter%></p>
+        <p class="subtitle mt-2"><%=@article.created_at.strftime("%Y-%m-%d")%> | <%=@article.reporter%></p>
         <div class="card ">
         
         <div class="card-image has-text-centered">
@@ -15,7 +15,7 @@
             <div class="content ">
             <p class="is-size-4"><%=@article.desc%></p>
             <br>
-            <%=@article.created_at%> | <%=@article.reporter%>
+            <%=@article.created_at.strftime("%Y-%m-%d")%> | <%=@article.reporter%>
             </div>
         </div>
         </div>

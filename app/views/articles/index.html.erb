@@ -31,7 +31,7 @@
       <nav class="level is-mobile">
         <div class="level-left">
           <p class="level-item" aria-label="reply">
-            <%=article.created_at%> | <%=article.reporter%>
+            <%=article.created_at.strftime("%Y-%m-%d")%> | <%=article.reporter%>
           </p>
         </div>
       </nav>

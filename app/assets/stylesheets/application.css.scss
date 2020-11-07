@@ -15,3 +15,9 @@
  *= stub active_admin
  */
 @import 'bulma';
+
+.hero-1 {
+    @extend .hero;
+    background-size: cover;
+    
+  }

@@ -3,6 +3,7 @@ class ComicsController < ApplicationController
     @comics=Comic.all
     @daums=Daum.all
     @kakaos=Kakao.all
+    @platforms=Platform.all
   end
 
   def show

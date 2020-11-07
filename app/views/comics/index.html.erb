@@ -1,22 +1,22 @@
-<div class="container">
-                <section class="hero is-info welcome is-small mt-4">
-                    <div class="hero-body">
-                        <div class="container">
-                            <h1 class="title">
-                                What are the top webtoons in Korea, now ????
-                            </h1>
-                            <h2 class="subtitle">
-                                Check out our top 5 comics!
-                            </h2>
-                        </div>
-                    </div>
-                </section>
+<div class="container mt-4">
+    <section class="hero is-small has-background-info-light">
+     <div class="hero-body">
+      <div class="container  has-text-centered">
+        <h1 class="title is-size-3">
+          Webtoon rankings for major platforms
+        </h1>
+      </div>
+     </div>
+    </section>
 
  <div class="columns mt-4 is-multiline is-mobile">
   
   <div class="column box is-4 mt-4 has-text-centered">
-    <div class="tile notification is-primary ">
-        <p class="has-text-weight-bold is-size-4 ">Naver</p>
+    <div class="tile notification has-background-success-light ">
+        <img src="naver.png" class="image is-32x32 mr-3">
+        <p class="has-text-weight-bold is-size-4 ">
+        Naver
+        </p>
     </div>
     <%@count = 0%>
     <%@comics.each do |comic|%>
@@ -41,8 +41,11 @@
   </div>
   
  <div class="column box has-text-centered is-4 mt-4">
-    <div class="tile notification is-danger ">
-        <p class="has-text-weight-bold is-size-4 ">Daum</p>
+    <div class="tile notification has-background-danger ">
+        <img src="daum.png" class="image is-32x32 mr-3">
+        <p class="has-text-weight-bold is-size-4 ">
+        Daum
+        </p>
     </div>
     <%@count = 0%>
     <%@daums.each do |daum|%>
@@ -66,8 +69,11 @@
   </div>
 
  <div class="column box is-4 mt-4">
-    <div class="tile notification is-warning ">
-        <div class="has-text-weight-bold is-size-4 ">Kakao Page</div>
+    <div class="tile notification has-background-warning ">
+        <img src="kakao.png" class="image is-32x32 mr-3">
+        <p class="has-text-weight-bold is-size-4 ">
+        Kakao page
+        </p>
     </div>
     <%@count = 0%>
     <%@kakaos.each do |kakao|%>

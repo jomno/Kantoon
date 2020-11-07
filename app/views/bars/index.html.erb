@@ -1,13 +1,10 @@
 <div class="container mt-4">
-    <section class="hero is-info welcome is-small mt-4" style="background-image: url()">
+    <section class="hero is-small has-background-info-light">
      <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Webtoon markets in Korea
+      <div class="container has-text-centered">
+        <h1 class="title is-size-3">
+          Webtoon market analysis
         </h1>
-        <h2 class="subtitle">
-            Check out our top 5 comics!
-        </h2>
       </div>
      </div>
     </section>
@@ -43,9 +40,11 @@
 
     <div class="columns mt-4 is-centered">
      <div class="column is-5 mr-6">
+     <p class="has-text-centered is-size-4 my-2">웹툰 에피소드 누적 동향</p>
       <%=column_chart @bars.pluck(:year, :epi), xtitle: "년도", ytitle: "단위(편)", colors: ["#8838F4"]%>
      </div>
      <div class="column is-5 ml-6">
+     <p class="has-text-centered is-size-4 my-2">만화 작가 비율</p>
       <%=pie_chart @pies.pluck(:kind, :percent), donut: true %>
      </div>
     </div>
@@ -55,7 +54,7 @@
            <div class = "columns is-centered">
             <div class = "column is-5">
             <br>
-            
+            <p class="has-text-centered is-size-4 my-2">웹툰 플렛폼 시장 점유율</p>
             <table class = "table is-hoverable is-striped is-fullwidth ">
                <thead>
                   <tr>

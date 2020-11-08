@@ -28,7 +28,7 @@
         </div>
         <div class="column ">
             <%if comic.image.attached?%>
-             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image ml-5", style:"width: 300px;"%></div>
+             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image ml-5 image is-3by2"%></div>
 
             <% end %>
             <div class="title mt-3"><%=comic.title%></div>
@@ -57,7 +57,7 @@
         </div>
         <div class="column">
             <%if daum.image.attached?%>
-            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image ml-5", style:"width: 300px;"%></div>
+            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image ml-5 is-3by2"%></div>
 
             <% end %>
             <div class="title mt-3"><%=daum.title%></div>
@@ -85,7 +85,7 @@
         </div>
         <div class="column">
             <%if kakao.image.attached?%>
-            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image ml-5", style:"width: 300px;"%></div>
+            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image ml-5 is-3by2"%></div>
 
             <% end %>
             <div class="title mt-3"><%=kakao.title%></div>

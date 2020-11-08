@@ -1,20 +1,16 @@
 <div class="container mt-4">
-    <section class="hero is-small has-background-info-light">
+    <section class="hero is-small has-background-primary-light">
      <div class="hero-body">
       <div class="container  has-text-centered">
         <h1 class="title is-size-3">
-          <i class="fas fa-paper-plane mr-3"></i>Webtoon News in Korea
+          Search result
         </h1>
-          <%= form_tag(search_path,:method => 'get') do %>
-           <%= text_field_tag :search%>
-           <%= submit_tag 'Search', class:"button is-warning is-inverted", :name => nil %>
-          <% end %>
       </div>
      </div>
     </section>
-  <div class="columns is-multiline is-mobile">
+    <div class="columns is-centered is-multiline">
   <%@articles.each do |article|%>
-        <div class="column mt-4 is-half">
+        <div class="column my-5 is-8">
         <div class="box">
   <article class="media">
     <div class="media-left">
@@ -42,7 +38,7 @@
     </div>
   </article>
 </div>
-        </div>
-    <% end %>
-  </div>
 </div>
+    <% end %>
+    </div>
+    </div>

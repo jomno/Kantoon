@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An application introducing foreigner about Korean web comics called 'webtoon'. The app illustrates various information including a bit of the current webtoon market environment, top-ranked webtoons, news, etc. 
+
+The name of the web application is 'Kantoon'.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.7.0
 
-* System dependencies
+* Rails version: 5.2.4.4
 
-* Configuration
+* Active_admin menu:
+    Ranking page:
+    Comics => Naver webtoon items
+    Daums => Daum webtoon items
+    Kakaos => Kakao webtoon items
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    Staticss page:
+    Bars => column chart
+    Pies => pie chart
+    Platforms => Platform ranking chart

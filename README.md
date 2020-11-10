@@ -10,13 +10,13 @@ Things you may want to cover:
 
 * Rails version: 5.2.4.4
 
-* Active_admin menu:
-    Ranking page:
-    Comics => Naver webtoon items
-    Daums => Daum webtoon items
-    Kakaos => Kakao webtoon items
+* Active_admin menu:<br><br>
+    Ranking page:<br>
+    Comics => Naver webtoon items<br>
+    Daums => Daum webtoon items<br>
+    Kakaos => Kakao webtoon items<br><br>
 
-    Staticss page:
-    Bars => column chart
-    Pies => pie chart
-    Platforms => Platform ranking chart
+    Staticss page:<br>
+    Bars => column chart<br>
+    Pies => pie chart<br>
+    Platforms => Platform ranking chart<br>

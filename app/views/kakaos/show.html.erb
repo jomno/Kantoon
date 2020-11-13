@@ -1,34 +1,33 @@
 <div class= "container">
-<div class="columns mt-4">
-  <div class= "column is-6">
-  <%if @kakao.image.attached?%>
-    <%=image_tag @kakao.image %>
-    </div>
+  <div class="columns mt-4">
+    <div class= "column is-6">
+      <%if @kakao.image.attached?%>
+        <%=image_tag @kakao.image %>
+      </div>
     <% else %>
-    <%=image_tag ("https://via.placeholder.com/649x360?text=No+image") %>
+      <%=image_tag ("https://via.placeholder.com/649x360?text=No+image") %>
     <% end %>
-  <div class= "column is-6">
-    <div class="card">
+    <div class= "column is-6">
+      <div class="card">
         <header class="card-header">
-            <p class="card-header-title has-background-white-ter is-size-3 ">
+          <p class="card-header-title has-background-white-ter is-size-3 ">
             <%=@kakao.title%>
-            </p>
+          </p>
         </header>
-                <header class="card-header">
-            <p class="card-header-subtitle is-size-5 is-italic ml-3">
+        <header class="card-header">
+          <p class="card-header-subtitle is-size-5 is-italic ml-3">
             Author: <%=@kakao.author%> / Genre: <%=@kakao.genre%>
-            </p>
+          </p>
         </header>
-  <div class="card-content ml-3">
-    <h5><%=@kakao.desc%></h5>
-
-  </div>
-  <footer class="card-footer">
-    <a href="#" class="card-footer-item "><i class="fas fa-external-link-square-alt mr-2"></i>
-        Try the first episode
-    </a>
-  </footer>
-</div>
+        <div class="card-content ml-3">
+          <h5><%=@kakao.desc%></h5>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item "><i class="fas fa-external-link-square-alt mr-2"></i>
+            Try the first episode
+          </a>
+        </footer>
+      </div>
     </div>
-</div>
+  </div>
 </div>

@@ -1,99 +1,88 @@
 <div class="container mt-4">
-    <section class="hero is-small has-background-info-light">
-     <div class="hero-body">
+  <section class="hero is-small has-background-info-light">
+    <div class="hero-body">
       <div class="container  has-text-centered">
         <h1 class="title is-size-3">
           <i class="fas fa-sort-amount-up-alt mr-3"></i>Webtoon Rankings for Major Platforms
         </h1>
       </div>
-     </div>
-    </section>
-
- <div class="columns mt-4 is-multiline is-mobile">
-  
-  <div class="column is-4 mt-4 has-text-centered">
-    <div class="tile notification has-background-success-light ">
+    </div>
+  </section>
+  <div class="columns mt-4 is-multiline is-mobile">
+    <div class="column is-4 mt-4 has-text-centered">
+      <div class="tile notification has-background-success-light ">
         <img src="naver.png" class="image is-32x32 mr-3">
         <p class="has-text-weight-bold is-size-4 ">
-        Naver
+          Naver
         </p>
-    </div>
-    <%@count = 0%>
-    <%@comics.each do |comic|%>
-    <div class="columns">
-        <div class="column is-narrow has-text-centered">
-             <div style="width: 40px;">
-               <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
+      </div>
+      <%@count = 0%>
+      <%@comics.each do |comic|%>
+        <div class="columns">
+          <div class="column is-narrow has-text-centered">
+            <div style="width: 40px;">
+              <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
             </div>
-        </div>
-        <div class="column ">
+          </div>
+          <div class="column ">
             <%if comic.image.attached?%>
-             <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image ml-5 image is-3by2"%></div>
-
+              <div><%=link_to (image_tag comic.image),comic_path(comic) , class:"image ml-5 image is-3by2"%></div>
             <% end %>
             <div class="title mt-3"><%=comic.title%></div>
             <div class="subtitle has-text-grey"><%=comic.genre%> | <%=comic.author%></div>
-            
+          </div>
         </div>
-
+      <%end%>
     </div>
-    <%end%>
-  </div>
-  
- <div class="column box has-text-centered is-4 mt-4">
-    <div class="tile notification has-background-danger ">
+    <div class="column box has-text-centered is-4 mt-4">
+      <div class="tile notification has-background-danger ">
         <img src="daum.png" class="image is-32x32 mr-3">
         <p class="has-text-weight-bold is-size-4 ">
-        Daum
+          Daum
         </p>
-    </div>
-    <%@count = 0%>
-    <%@daums.each do |daum|%>
-    <div class="columns">
-        <div class="column is-narrow has-text-centered">
-             <div style="width: 50px;">
-               <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
+      </div>
+      <%@count = 0%>
+      <%@daums.each do |daum|%>
+        <div class="columns">
+          <div class="column is-narrow has-text-centered">
+            <div style="width: 50px;">
+              <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
             </div>
-        </div>
-        <div class="column">
+          </div>
+          <div class="column">
             <%if daum.image.attached?%>
-            <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image ml-5 is-3by2"%></div>
-
+              <div><%=link_to (image_tag daum.image),daum_path(daum) , class:"image ml-5 is-3by2"%></div>
             <% end %>
             <div class="title mt-3"><%=daum.title%></div>
-            <div class="subtitle has-text-grey"><%=daum.genre%> | <%=daum.author%></div>            
+            <div class="subtitle has-text-grey"><%=daum.genre%> | <%=daum.author%></div>
+          </div>
         </div>
-
+      <%end%>
     </div>
-    <%end%>
-  </div>
-
- <div class="column  is-4 mt-4">
-    <div class="tile notification has-background-warning ">
+    <div class="column  is-4 mt-4">
+      <div class="tile notification has-background-warning ">
         <img src="kakao.png" class="image is-32x32 mr-3">
         <p class="has-text-weight-bold is-size-4 ">
-        Kakao page
+          Kakao page
         </p>
-    </div>
-    <%@count = 0%>
-    <%@kakaos.each do |kakao|%>
-    <div class="columns has-text-centered">
-        <div class="column is-narrow has-text-centered">
-             <div style="width: 50px;">
-               <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
+      </div>
+      <%@count = 0%>
+      <%@kakaos.each do |kakao|%>
+        <div class="columns has-text-centered">
+          <div class="column is-narrow has-text-centered">
+            <div style="width: 50px;">
+              <p class="title is-5">No. <span class="is-size-3"><%=@count+=1%></span></p>
             </div>
-        </div>
-        <div class="column">
+          </div>
+          <div class="column">
             <%if kakao.image.attached?%>
-            <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image ml-5 is-3by2"%></div>
-
+              <div><%=link_to (image_tag kakao.image),kakao_path(kakao) , class:"image ml-5 is-3by2"%></div>
             <% end %>
             <div class="title mt-3"><%=kakao.title%></div>
-            <div class="subtitle has-text-grey"><%=kakao.genre%> | <%=kakao.author%></div>            
+            <div class="subtitle has-text-grey"><%=kakao.genre%> | <%=kakao.author%></div>
+          </div>
         </div>
+      <%end%>
     </div>
-    <%end%>
   </div>
-
-</div>
 </div>

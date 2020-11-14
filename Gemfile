@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.6.3'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -18,6 +18,7 @@ gem "chartkick"
 
 group :production do
     gem 'pg'
+    gem 'rails_12factor'
 end
 
 gem 'coffee-rails', '~> 4.2'
